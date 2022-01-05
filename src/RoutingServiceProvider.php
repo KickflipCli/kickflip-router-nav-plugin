@@ -21,10 +21,8 @@ class RoutingServiceProvider extends BaseRoutingServiceProvider
 {
     /**
      * Register the service provider.
-     *
-     * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->registerRouter();
         $this->registerUrlGenerator();
@@ -32,10 +30,8 @@ class RoutingServiceProvider extends BaseRoutingServiceProvider
 
     /**
      * Register the URL generator service.
-     *
-     * @return void
      */
-    protected function registerUrlGenerator()
+    protected function registerUrlGenerator(): void
     {
         $this->app->singleton('url', function ($app) {
             /**
